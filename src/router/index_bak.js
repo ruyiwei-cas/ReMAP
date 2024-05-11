@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import data from "@/view/data";
 import practice from "@/view/practice";
 
 const routes = [
     {
-        path: '/',
+        path: '',
         name: 'data',
         component: data
     },
@@ -14,10 +14,9 @@ const routes = [
         component: practice
     }
 ];
-
 const router = createRouter({
-    history: createWebHistory(), // 修改这里使用 createWebHistory
+    history: createWebHashHistory(),
     routes
-});
 
-export default router;
+})
+export default router
